@@ -4,13 +4,13 @@ var inputNumber = document.getElementById('input-number');
 var bblSort = document.getElementById('bubble-sort');
 var selSort = document.getElementById('selection-sort');
 var insSort = document.getElementById('insertion-sort');
-
+var clearBtn = document.getElementById('clear-btn');
 
 btnGenerate.addEventListener('click', function() {
     var nums = [];
     var numInput = inputNumber.value;
     for (var i = 0; i < numInput; i++) {
-        var num = Math.floor(Math.random() * 100 + 1);
+        var num = Math.floor(Math.random() * 1000 + 1);
         nums.push(num);
     }
     result.setAttribute('value', (nums.join(',')));
@@ -46,6 +46,10 @@ btnGenerate.addEventListener('click', function() {
         insSort.setAttribute('value', (nums.join(', ')));
     }
 });
+
+clearBtn.addEventListener('click', function() {
+    location.reload();
+})
 
 function bubbleSort(arr) {
     var swapped;
