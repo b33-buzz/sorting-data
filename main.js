@@ -47,9 +47,6 @@ btnGenerate.addEventListener('click', function() {
     }
 });
 
-clearBtn.addEventListener('click', function() {
-    location.reload();
-})
 
 function bubbleSort(arr) {
     var swapped;
@@ -96,3 +93,6 @@ function insertionSort(arr) {
     }
     return arr;
 }
+clearBtn.addEventListener('click', function() {
+    location.reload();
+})
